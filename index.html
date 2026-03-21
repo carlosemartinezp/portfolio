@@ -1,84 +1,52 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Carlos Martínez | Ciberseguridad y Backend</title>
-
-  <link rel="stylesheet" href="styles.css" />
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-</head>
-
-<body>
-
-<header class="header">
-  <div class="container nav">
-    <h2 class="logo">Carlos<span>.</span></h2>
-  </div>
-</header>
-
-<section class="hero">
-  <div class="container hero-grid">
-
-    <!-- TEXTO -->
-    <div>
-      <h1>
-        Carlos Martínez<br>
-        <span>Analista de Ciberseguridad</span>
-      </h1>
-
-      <p>
-        Desarrollo soluciones seguras y confiables enfocadas en backend,
-        seguridad de aplicaciones y automatización.
-      </p>
-
-      <div class="hero-buttons">
-        <a href="#projects" class="btn primary">Ver proyectos</a>
-        <a href="#contact" class="btn secondary">Contacto</a>
-      </div>
-    </div>
-
-    <!-- FOTO -->
-    <div class="hero-image">
-      <img src="images/carlos-martinez-profile.jpg" alt="Carlos Martinez">
-    </div>
-
-  </div>
-</section>
-
 <section id="projects" class="section">
   <div class="container">
     <h2>Proyectos</h2>
+    <p class="section-intro">
+      Proyectos enfocados en seguridad, desarrollo y aprendizaje práctico con aplicación real.
+    </p>
 
     <div class="projects">
-      <div class="card">
+      <div class="card project-card">
+        <span class="project-status">En desarrollo</span>
         <h3>Herramienta de análisis de seguridad</h3>
         <p>
-          Proyecto en desarrollo enfocado en analizar la seguridad de aplicaciones
-          o sitios web mediante inspección técnica y automatización.
+          Proyecto orientado a evaluar aspectos de seguridad en aplicaciones o sitios web
+          mediante inspección técnica y automatización. Su objetivo es identificar
+          configuraciones inseguras, mejorar la visibilidad técnica y fortalecer buenas prácticas de seguridad.
         </p>
+
+        <div class="project-tags">
+          <span>Python</span>
+          <span>HTTP</span>
+          <span>Seguridad</span>
+          <span>Automatización</span>
+        </div>
+
+        <a href="https://github.com/carlosemartinezp" target="_blank" rel="noopener noreferrer" class="project-link">
+          Ver GitHub
+        </a>
       </div>
 
-      <div class="card">
+      <div class="card project-card">
+        <span class="project-status live">En línea</span>
         <h3>Portafolio personal</h3>
         <p>
-          Sitio web desplegado con GitHub y Cloudflare Pages como base
-          de mi presencia profesional.
+          Sitio web personal desarrollado como base de mi presencia profesional en línea.
+          Diseñado para presentar mi perfil, proyectos y evolución en ciberseguridad,
+          desarrollo backend y automatización.
         </p>
+
+        <div class="project-tags">
+          <span>HTML</span>
+          <span>CSS</span>
+          <span>GitHub</span>
+          <span>Cloudflare Pages</span>
+        </div>
+
+        <a href="https://carlosemartinez.dev" target="_blank" rel="noopener noreferrer" class="project-link">
+          Ver sitio web
+        </a>
       </div>
     </div>
   </div>
 </section>
-
-<section id="contact" class="section">
-  <div class="container">
-    <h2>Contacto</h2>
-    <p>Email: carlosemartinezp@proton.me</p>
-  </div>
-</section>
-
-</body>
-</html>
