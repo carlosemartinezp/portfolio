@@ -1,12 +1,15 @@
+/* =========================
+   BASE
+========================= */
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: 'Inter', sans-serif;
   background: #0f172a;
   color: #e5e7eb;
-}
-
-* {
-  box-sizing: border-box;
 }
 
 .container {
@@ -15,7 +18,82 @@ body {
   padding: 0 20px;
 }
 
-/* HERO */
+/* =========================
+   LAYOUT GENERAL
+========================= */
+.section {
+  padding: 48px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.section h2 {
+  font-size: 1.9rem;
+  margin: 0 0 10px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.section-intro {
+  color: #94a3b8;
+  max-width: 700px;
+  margin: 0 0 24px;
+}
+
+/* =========================
+   COMPONENTES REUTILIZABLES
+========================= */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 22px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.btn.primary {
+  background: #2563eb;
+  color: #ffffff;
+  border: 1px solid #2563eb;
+}
+
+.btn.primary:hover {
+  background: #1d4ed8;
+  border-color: #1d4ed8;
+}
+
+.btn.secondary {
+  background: transparent;
+  color: #e5e7eb;
+  border: 1px solid rgba(229, 231, 235, 0.22);
+}
+
+.btn.secondary:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(229, 231, 235, 0.38);
+}
+
+.project-status {
+  display: inline-block;
+  margin-bottom: 14px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: rgba(56, 189, 248, 0.12);
+  color: #38bdf8;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.project-status.live {
+  background: rgba(34, 197, 94, 0.12);
+  color: #22c55e;
+}
+
+/* =========================
+   HERO
+========================= */
 .hero {
   padding: 48px 0 24px;
 }
@@ -58,39 +136,6 @@ body {
   flex-wrap: wrap;
 }
 
-.btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 12px 22px;
-  border-radius: 10px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: all 0.2s ease;
-}
-
-.btn.primary {
-  background: #2563eb;
-  color: #ffffff;
-  border: 1px solid #2563eb;
-}
-
-.btn.primary:hover {
-  background: #1d4ed8;
-  border-color: #1d4ed8;
-}
-
-.btn.secondary {
-  background: transparent;
-  color: #e5e7eb;
-  border: 1px solid rgba(229, 231, 235, 0.22);
-}
-
-.btn.secondary:hover {
-  background: rgba(255, 255, 255, 0.05);
-  border-color: rgba(229, 231, 235, 0.38);
-}
-
 .hero-image {
   display: flex;
   justify-content: center;
@@ -103,26 +148,9 @@ body {
   box-shadow: 0 18px 45px rgba(0, 0, 0, 0.35);
 }
 
-/* SECCIONES */
-.section {
-  padding: 48px 0;
-  border-top: 1px solid rgba(255, 255, 255, 0.04);
-}
-
-.section h2 {
-  font-size: 1.9rem;
-  margin: 0 0 10px;
-  font-weight: 700;
-  letter-spacing: -0.01em;
-}
-
-.section-intro {
-  color: #94a3b8;
-  max-width: 700px;
-  margin: 0 0 24px;
-}
-
-/* SOBRE MI */
+/* =========================
+   SOBRE MÍ
+========================= */
 .about {
   display: grid;
   grid-template-columns: 1.15fr 0.85fr;
@@ -167,13 +195,9 @@ body {
   line-height: 1.65;
 }
 
-@media (max-width: 900px) {
-  .about {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* PROYECTO DESTACADO */
+/* =========================
+   PROYECTO DESTACADO
+========================= */
 .featured-project {
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
@@ -229,26 +253,29 @@ body {
   gap: 16px;
 }
 
+.detail-card {
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
 .detail-card h4 {
-  margin-bottom: 12px;
+  margin: 0 0 12px;
+  color: #f8fafc;
 }
 
 .detail-card ul {
+  margin: 0;
   padding-left: 18px;
   color: #94a3b8;
+  line-height: 1.7;
 }
 
 .detail-card li {
   margin-bottom: 8px;
 }
 
-@media (max-width: 900px) {
-  .featured-project {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* PROYECTOS */
+/* =========================
+   PROYECTOS
+========================= */
 .projects {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -260,28 +287,12 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 18px;
   padding: 24px;
-  transition: transform 0.2s ease, border 0.2s ease;
+  transition: transform 0.2s ease, border-color 0.2s ease;
 }
 
 .project-card:hover {
   transform: translateY(-3px);
   border-color: rgba(56, 189, 248, 0.25);
-}
-
-.project-status {
-  display: inline-block;
-  margin-bottom: 14px;
-  padding: 6px 12px;
-  border-radius: 999px;
-  background: rgba(56, 189, 248, 0.12);
-  color: #38bdf8;
-  font-size: 0.85rem;
-  font-weight: 600;
-}
-
-.project-status.live {
-  background: rgba(34, 197, 94, 0.12);
-  color: #22c55e;
 }
 
 .project-card h3 {
@@ -320,7 +331,9 @@ body {
   text-decoration: underline;
 }
 
-/* CONTACTO */
+/* =========================
+   CONTACTO
+========================= */
 #contact p {
   margin: 0;
   color: #cbd5e1;
@@ -347,14 +360,22 @@ body {
   flex-wrap: wrap;
 }
 
-/* RESPONSIVE */
+/* =========================
+   RESPONSIVE
+========================= */
 @media (max-width: 900px) {
   .hero {
     padding: 36px 0 20px;
   }
 
-  .hero-grid {
+  .hero-grid,
+  .about,
+  .featured-project,
+  .projects {
     grid-template-columns: 1fr;
+  }
+
+  .hero-grid {
     gap: 24px;
   }
 
@@ -365,9 +386,5 @@ body {
 
   .hero-image img {
     max-width: 220px;
-  }
-
-  .projects {
-    grid-template-columns: 1fr;
   }
 }
