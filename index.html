@@ -89,9 +89,8 @@
             <h3>Web Security Analyzer</h3>
 
             <p class="featured-description">
-              Herramienta CLI desarrollada en Python que analiza headers HTTP de seguridad,
-              detecta posibles malas configuraciones y genera reportes estructurados en
-              formato TXT y JSON para revisión técnica e integración futura.
+              Herramienta CLI desarrollada en Python para analizar headers HTTP de seguridad,
+              detectar malas configuraciones y generar reportes técnicos en TXT y JSON.
             </p>
 
             <div class="project-meta">
@@ -122,10 +121,8 @@
                 <li>Generación de reportes en TXT y JSON</li>
                 <li>Validación básica de URL</li>
               </ul>
-            </div>
 
-            <div class="detail-card">
-              <h4>Aspectos destacados</h4>
+              <h4 class="detail-subtitle">Aspectos destacados</h4>
               <ul>
                 <li>Estructura modular para una herramienta CLI</li>
                 <li>Lógica orientada a análisis técnico de seguridad</li>
@@ -135,8 +132,70 @@
             </div>
           </div>
         </div>
+
+        <div class="project-preview">
+          <div class="preview-card">
+            <h4>Salida JSON</h4>
+            <pre><code>{
+  "url": "https://www.google.com",
+  "timestamp": "2026-04-10 21:14:36",
+  "findings": [
+    {
+      "header": "Strict-Transport-Security",
+      "status": "missing",
+      "severity": "HIGH"
+    },
+    {
+      "header": "Content-Security-Policy",
+      "status": "missing",
+      "severity": "HIGH"
+    },
+    {
+      "header": "X-Content-Type-Options",
+      "status": "missing",
+      "severity": "MEDIUM"
+    }
+  ],
+  "summary": {
+    "total": 5,
+    "high": 2,
+    "medium": 1,
+    "low": 1,
+    "ok": 1
+  }
+}
+</code></pre>
+          </div>
+
+          <div class="preview-card">
+            <h4>Ejemplo de reporte</h4>
+<pre><code>URL: https://www.google.com
+
+=== HALLAZGOS ===
+
+[HIGH] Strict-Transport-Security → no encontrado
+Riesgo: Protege contra ataques downgrade HTTP y fuerza HTTPS.
+Recomendación: Configurar HSTS para forzar conexiones seguras.
+
+[HIGH] Content-Security-Policy → no encontrado
+Riesgo: Puede permitir ataques XSS y carga de contenido no confiable.
+Recomendación: Definir una política CSP adecuada.
+
+[LOW] Server → expuesto
+Riesgo: Expone información del servidor.
+Recomendación: Ocultar o minimizar el header Server.
+
+=== RESUMEN ===
+TOTAL: 5
+HIGH: 2
+MEDIUM: 1
+LOW: 1
+OK: 1
+</code></pre>
+          </div>
+        </div>
       </div>
-    </section>    
+    </section>
 
     <section id="projects" class="section">
       <div class="container">
