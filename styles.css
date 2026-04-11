@@ -122,6 +122,7 @@ body {
   margin: 0 0 24px;
 }
 
+/* SOBRE MI */
 .about {
   display: grid;
   grid-template-columns: 1.15fr 0.85fr;
@@ -168,6 +169,81 @@ body {
 
 @media (max-width: 900px) {
   .about {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* PROYECTO DESTACADO */
+.featured-project {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 24px;
+}
+
+.featured-content,
+.detail-card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  padding: 28px;
+}
+
+.featured-content {
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.featured-content:hover,
+.detail-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(56, 189, 248, 0.25);
+}
+
+.featured-content h3 {
+  font-size: 2rem;
+  margin: 0 0 14px;
+}
+
+.featured-description {
+  color: #94a3b8;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+.project-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.project-meta span {
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: #1f2937;
+  color: #cbd5e1;
+  font-size: 0.9rem;
+}
+
+.featured-details {
+  display: grid;
+  gap: 16px;
+}
+
+.detail-card h4 {
+  margin-bottom: 12px;
+}
+
+.detail-card ul {
+  padding-left: 18px;
+  color: #94a3b8;
+}
+
+.detail-card li {
+  margin-bottom: 8px;
+}
+
+@media (max-width: 900px) {
+  .featured-project {
     grid-template-columns: 1fr;
   }
 }
