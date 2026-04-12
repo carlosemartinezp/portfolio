@@ -272,18 +272,18 @@ body {
 }
 
 .detail-subtitle {
-  margin-top: 24px !important;
+  margin-top: 24px;
 }
 
 .detail-card ul {
   margin: 0;
   padding-left: 18px;
   color: #94a3b8;
-  line-height: 1.7;
+  line-height: 1.5;
 }
 
 .detail-card li {
-  margin-bottom: 8px;
+  margin-bottom: 6px;
 }
 
 .project-preview {
@@ -329,6 +329,38 @@ body {
   line-height: 1.6;
   color: #cbd5e1;
   white-space: pre;
+}
+.technical-details {
+  margin-top: 20px;
+  padding: 18px 24px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  width: 100%;
+  grid-column: span 2;
+}
+
+.technical-details h4 {
+  margin: 0 0 10px;
+  color: #f8fafc;
+}
+
+.technical-details ul {
+  margin: 0;
+  padding-left: 18px;
+  color: #94a3b8;
+  line-height: 1.5;
+  column-count: 2;
+  column-gap: 40px;
+}
+
+.technical-details li {
+  margin-bottom: 8px;
+  break-inside: avoid;
+}
+
+.technical-details li:last-child {
+  margin-bottom: 0;
 }
 
 /* =========================
@@ -448,5 +480,9 @@ body {
   
   .project-preview {
     grid-template-columns: 1fr;
+  }
+
+  .technical-details ul {
+    column-count: 1;
   }
 }
