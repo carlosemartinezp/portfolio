@@ -300,6 +300,7 @@ body {
   padding: 24px;
   transition: transform 0.2s ease, border-color 0.2s ease;
   min-height: 420px;
+  min-width: 0;
 }
 
 .preview-card:hover {
@@ -320,6 +321,7 @@ body {
   border-radius: 14px;
   overflow-x: auto;
   overflow-y: auto;
+  max-width: 100%;
   max-height: 340px;
 }
 
@@ -476,6 +478,20 @@ body {
 
   .hero-image img {
     max-width: 220px;
+  }
+
+  .preview-card {
+  min-width: 0;
+  }
+
+  .preview-card pre {
+  padding: 14px;
+  max-width: 100%;
+  }
+
+  .preview-card code {
+  font-size: 0.82rem;
+  line-height: 1.5;
   }
   
   .project-preview {
